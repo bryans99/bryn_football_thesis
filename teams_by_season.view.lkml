@@ -2,6 +2,7 @@ view: teams_by_season {
   sql_table_name: football.teams_by_season ;;
 
   dimension: _id {
+    primary_key: yes
     type: number
     sql: ${TABLE}._id ;;
   }

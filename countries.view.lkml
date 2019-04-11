@@ -2,6 +2,7 @@ view: countries {
   sql_table_name: football.countries ;;
 
   dimension: _id {
+    primary_key: yes
     type: number
     sql: ${TABLE}._id ;;
   }

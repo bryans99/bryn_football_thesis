@@ -2,6 +2,7 @@ view: transfers {
   sql_table_name: football.transfers ;;
 
   dimension: _id {
+    primary_key: yes
     type: number
     sql: ${TABLE}._id ;;
   }

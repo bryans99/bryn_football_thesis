@@ -16,13 +16,29 @@ explore: events {}
 
 explore: fixtures {}
 
-explore: leagues {}
+explore: leagues {
+  # Only interested in English Teams
+  always_filter: {
+    filters: {
+      field: id_country
+      value: "46"
+    }
+  }
+}
 
 explore: lineups {}
 
 explore: players {}
 
-explore: seasons {}
+explore: seasons {
+  # Only interested in English Teams
+  always_filter: {
+    filters: {
+      field: id_country
+      value: "46"
+    }
+  }
+}
 
 explore: standings {}
 
@@ -38,6 +54,19 @@ explore: teams {
   }
 }
 
-explore: teams_by_season {}
+explore: teams_by_season {
+  # Only interested in English Teams
+  always_filter: {
+    filters: {
+      field: seasons.id_country
+      value: "46"
+    }
+  }
+  join: seasons {
+    type: left_outer
+    relationship: many_to_many
+    sql_on: ${seasons._id} = ${teams_by_season.id_season} ;;
+  }
+}
 
 explore: transfers {}

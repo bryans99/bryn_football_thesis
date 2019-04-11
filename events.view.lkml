@@ -2,6 +2,7 @@ view: events {
   sql_table_name: football.events ;;
 
   dimension: _id {
+    primary_key: yes
     type: number
     sql: ${TABLE}._id ;;
   }

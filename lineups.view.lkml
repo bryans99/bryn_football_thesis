@@ -2,6 +2,7 @@ view: lineups {
   sql_table_name: football.lineups ;;
 
   dimension: _id {
+    primary_key: yes
     type: number
     sql: ${TABLE}._id ;;
   }
