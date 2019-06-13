@@ -31,4 +31,9 @@ view: teams_by_season {
     type: count
     drill_fields: [season_name, team_name]
   }
+
+  measure: count_teams {
+    type: count_distinct
+    sql:  ${TABLE}.id_team ;;
+  }
 }

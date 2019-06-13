@@ -28,21 +28,36 @@ explore: leagues {
 
 explore: lineups {}
 
-explore: players {}
+explore: players {
+}
 
 explore: seasons {
-  # Only interested in English Teams
+  # Only interested in Premier League
   always_filter: {
     filters: {
-      field: id_country
-      value: "46"
+      field: id_league
+      value: "08"
     }
   }
 }
 
-explore: standings {}
+explore: standings {
+  # Standings data is limited to last 9 years
+  join: seasons {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${seasons._id} = ${standings.season} ;;
+  }
+}
 
-explore: team_season_players {}
+explore: team_season_players {
+  sql_always_where: ${player_name} > '' and ${teams_by_season.season_name} like 'Premier League%';;
+  join: teams_by_season {
+    type: left_outer
+    relationship: many_to_many
+    sql_on: ${team_season_players.id_team_season} = ${teams_by_season._id} ;;
+  }
+}
 
 explore: teams {
   # Only interested in English Teams
@@ -55,18 +70,7 @@ explore: teams {
 }
 
 explore: teams_by_season {
-  # Only interested in English Teams
-  always_filter: {
-    filters: {
-      field: seasons.id_country
-      value: "46"
-    }
-  }
-  join: seasons {
-    type: left_outer
-    relationship: many_to_many
-    sql_on: ${seasons._id} = ${teams_by_season.id_season} ;;
-  }
+  sql_always_where: ${season_name} like 'Premier League%' ;;
 }
 
 explore: transfers {}
