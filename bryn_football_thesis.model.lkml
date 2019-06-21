@@ -2,6 +2,7 @@ connection: "lookerdata_publicdata_standard_sql"
 
 # include all the views
 include: "*.view"
+include: "*.dashboard.lookml"
 
 datagroup: bryn_football_thesis_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
