@@ -2,8 +2,8 @@
   title: Premier League Dashboard
   layout: tile
   elements:
-  - title: Premier League Team Win Count
-    name: Premier League Team Win Count
+  - title: Premier League Team Wins
+    name: Premier League Team Wins
     model: bryn_football_thesis
     explore: standings
     type: looker_column
@@ -32,8 +32,8 @@
     col: 8
     width: 8
     height: 6
-  - title: Longest Playing Players
-    name: Longest Playing Players
+  - title: Long Playing Players
+    name: Long Playing Players
     model: bryn_football_thesis
     explore: team_season_players
     type: looker_bar
@@ -48,8 +48,8 @@
     col: 16
     width: 8
     height: 6
-  - title: Players who've played for most teams
-    name: Players who've played for most teams
+  - title: Players who move around a lot
+    name: Players who move around a lot
     model: bryn_football_thesis
     explore: team_season_players
     type: looker_column
