@@ -71,6 +71,10 @@ explore: teams {
 
 explore: teams_by_season {
   sql_always_where: ${season_name} like 'Premier League%' ;;
+  join: teams {
+    relationship: many_to_one
+    sql_on: ${teams._id} = ${teams_by_season.id_team} ;;
+  }
 }
 
 explore: transfers {}
