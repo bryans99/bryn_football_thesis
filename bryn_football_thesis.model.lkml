@@ -69,6 +69,10 @@ explore: teams {
       field: id_country
       value: "46"
     }
+    filters: {
+      field: region
+      value: "-Unknown"
+    }
   }
 }
 
