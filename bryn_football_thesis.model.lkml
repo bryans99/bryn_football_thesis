@@ -45,11 +45,22 @@ explore: seasons {
 }
 
 explore: standings {
+  always_filter: {
+    filters: {
+      field: team
+      value: "-NULL"
+    }
+  }
   # Standings data is limited to last 9 years
   join: seasons {
     type: left_outer
     relationship: many_to_one
     sql_on: ${seasons._id} = ${standings.season} ;;
+  }
+  join: teams {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${standings.team} = ${teams.name} ;;
   }
 }
 

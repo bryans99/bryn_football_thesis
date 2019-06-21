@@ -47,9 +47,9 @@ view: standings {
   }
 
   dimension: team {
-    type: string
+    type:  string
     sql: ${TABLE}.Team ;;
-  }
+    }
 
   dimension: win {
     type: number

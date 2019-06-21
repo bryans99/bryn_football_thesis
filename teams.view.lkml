@@ -13,7 +13,25 @@ view: teams {
 
   dimension: name {
     type: string
-    sql: ${TABLE}.name ;;
+    #sql: ${TABLE}.name ;;
+    sql:
+      CASE
+        WHEN ${TABLE}.name = "Tottenham" THEN "Tottenham Hotspur"
+        WHEN ${TABLE}.name = "Birmingham" THEN "Birmingham City"
+        WHEN ${TABLE}.name = "Blackburn" THEN "Blackburn Rovers"
+        WHEN ${TABLE}.name = "Bolton" THEN "Bolton Wanderers"
+        WHEN ${TABLE}.name = "Brighton" THEN "Brighton & Hove Albion"
+        WHEN ${TABLE}.name = "Cardiff" THEN "Cardiff City"
+        WHEN ${TABLE}.name = "Huddersfield" THEN "Huddersfield Town"
+        WHEN ${TABLE}.name = "Hull" THEN "Hull City"
+        WHEN ${TABLE}.name = "Leicester" THEN "Leicester City"
+        WHEN ${TABLE}.name = "Norwich" THEN "Norwich City"
+        WHEN ${TABLE}.name = "Stoke" THEN "Stoke City"
+        WHEN ${TABLE}.name = "Swansea" THEN "Swansea City"
+        WHEN ${TABLE}.name = "West Ham" THEN "West Ham United"
+        WHEN ${TABLE}.name = "Wigan" THEN "Wigan Athletic"
+      ELSE ${TABLE}.name
+      END ;;
   }
 
   dimension: region {
