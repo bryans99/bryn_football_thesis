@@ -1,6 +1,6 @@
 - dashboard: premier_league_dashboard
-  title: Dashboard of the The Premier League
-  layout: newspaper
+  title: Premier League Dashboard
+  layout: tile
   elements:
   - title: Premier League Team Win Count
     name: Premier League Team Win Count
