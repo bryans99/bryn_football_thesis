@@ -1,5 +1,5 @@
-- dashboard: football_thesis_all
-  title: Premier League Thesis Dashboard
+- dashboard: premier_league_dashboard
+  title: Dashboard of the The Premier League
   layout: newspaper
   elements:
   - title: Premier League Team Win Count
