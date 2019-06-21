@@ -1,6 +1,6 @@
 - dashboard: premier_league_dashboard
   title: Premier League Dashboard
-  layout: tile
+  layout: newspaper
   elements:
   - title: Premier League Team Wins
     name: Premier League Team Wins
