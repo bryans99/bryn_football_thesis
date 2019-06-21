@@ -2,6 +2,8 @@ connection: "lookerdata_publicdata_standard_sql"
 
 # include all the views
 include: "*.view"
+
+# include the dashboards
 include: "*.dashboard.lookml"
 
 datagroup: bryn_football_thesis_default_datagroup {
