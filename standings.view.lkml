@@ -58,6 +58,6 @@ view: standings {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [season, team, position, win, draw, loss, difference]
   }
 }
