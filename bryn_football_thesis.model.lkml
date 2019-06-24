@@ -20,6 +20,7 @@ explore: events {}
 explore: fixtures {}
 
 explore: leagues {
+  label: "@{project_prefix}"
   # Only interested in English Teams
   always_filter: {
     filters: {
