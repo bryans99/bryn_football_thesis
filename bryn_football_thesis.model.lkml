@@ -20,8 +20,8 @@ explore: events {}
 explore: fixtures {}
 
 explore: leagues {
-  # label: "@{project_prefix}"
-  label: "Premier League"
+  label: "@{project_prefix}"
+  # label: "Premier League"
   # Only interested in English Teams
   always_filter: {
     filters: {
