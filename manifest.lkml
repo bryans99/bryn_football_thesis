@@ -7,6 +7,6 @@ project_name: "bryn_football_thesis"
 #   project: "name_of_other_project"
 # }
 
-constant: project_prefix {
-  value: "Premier League"
-}
+# constant: project_prefix {
+#   value: "Premier League"
+# }
